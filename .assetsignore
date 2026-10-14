@@ -1,0 +1,16 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+.vscode
+.vscode/**
+.idea
+.idea/**
+node_modules
+node_modules/**
+.gitignore
+.assetsignore
+wrangler.jsonc
+README.md
+LICENSES.md
+modelos/LEIA-ME.md

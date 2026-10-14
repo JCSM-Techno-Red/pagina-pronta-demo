@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js" data-fonte="sans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modelos de página para barbearias e salões de beleza | Demonstração</title>
+  <meta name="description" content="Dois modelos de página profissional, um para barbearias e outro para salões de beleza, com dados fictícios para demonstração.">
+  <meta name="theme-color" content="#1b1714">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Modelos de página para barbearias e salões de beleza | Demonstração">
+  <meta property="og:description" content="Dois modelos de página profissional, um para barbearias e outro para salões de beleza, com dados fictícios para demonstração.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c8843c'/%3E%3Cpath d='M9 8h4v16H9zM19 8h4v16h-4z' fill='%231b1714'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <div class="model-bar" id="barra-modelos" role="region" aria-label="Escolha do modelo de demonstração">
+    <div class="container model-bar-inner">
+      <span class="model-bar-label" id="rotulo-modelos">Modelo de demonstração:</span>
+      <div class="segmented" id="seletor" role="group" aria-labelledby="rotulo-modelos"></div>
+    </div>
+  </div>
+  <p class="sr-only" id="anuncio" role="status" aria-live="polite"></p>
+
+  <aside class="demo-banner" data-demo hidden aria-label="Aviso de demonstração">
+    <p><strong>Página de demonstração.</strong> Nome, endereço, horários, preços, contatos e imagens são fictícios.</p>
+  </aside>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <svg class="brand-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor"/>
+          <path d="M10 9h4v14h-4zM18 9h4v14h-4z" style="fill: var(--on-primary)"/>
+        </svg>
+        <span data-bind="nome">Modelos de página</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li data-nav="sobre"><a href="#sobre">Sobre</a></li>
+          <li data-nav="servicos"><a href="#servicos">Serviços e preços</a></li>
+          <li data-nav="galeria"><a href="#galeria">Galeria</a></li>
+          <li data-nav="contato"><a href="#contato">Horários e local</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <noscript>
+      <p class="noscript-aviso">Esta página precisa de JavaScript para mostrar o conteúdo. Ative o JavaScript no navegador e recarregue.</p>
+    </noscript>
+    <p class="config-erro" id="config-erro" role="alert" hidden>Não foi possível carregar o arquivo <code>config.js</code>. Confira se ele está na mesma pasta de <code>index.html</code>.</p>
+
+    <section id="inicio" class="hero" aria-labelledby="titulo-hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow"><span data-bind="slogan"></span> <span class="badge" data-demo hidden>Modelo fictício</span></p>
+          <h1 id="titulo-hero" data-bind="titulo">Modelos de página para barbearias e salões</h1>
+          <p class="lead" data-bind="descricao"></p>
+          <div class="cta-row">
+            <div data-slot="whatsapp"></div>
+            <a class="btn btn-secondary" href="#servicos" data-requires="servicos">Ver serviços e preços</a>
+          </div>
+        </div>
+        <div class="hero-media" id="hero-media" hidden>
+          <img id="hero-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="400" height="300" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section" aria-labelledby="t-sobre">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2 id="t-sobre">Sobre nós</h2>
+          <div id="sobre-texto"></div>
+        </div>
+        <ul class="pillars" id="destaques"></ul>
+      </div>
+    </section>
+
+    <section id="servicos" class="section section-alt" aria-labelledby="t-servicos">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-servicos">Serviços e preços <span class="badge" data-demo hidden>Preços fictícios</span></h2>
+          <p class="section-intro" id="servicos-intro"></p>
+        </div>
+        <ul class="services" id="lista-servicos"></ul>
+      </div>
+    </section>
+
+    <section id="galeria" class="section" aria-labelledby="t-galeria">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-galeria">Galeria <span class="badge" data-demo hidden>Ilustrações</span></h2>
+          <p class="section-intro" id="galeria-intro"></p>
+        </div>
+        <ul class="gallery" id="lista-galeria"></ul>
+      </div>
+    </section>
+
+    <section id="contato" class="section section-alt" aria-labelledby="t-contato">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-contato">Horários e localização</h2>
+          <p class="section-intro" data-demo hidden>As informações abaixo são fictícias e existem apenas para demonstrar a página.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card" id="card-horarios" aria-labelledby="t-horarios">
+            <h3 id="t-horarios">Horário de atendimento <span class="badge" data-demo hidden>Fictício</span></h3>
+            <dl class="hours" id="lista-horarios"></dl>
+          </article>
+
+          <article class="info-card" id="card-local" aria-labelledby="t-local">
+            <h3 id="t-local">Onde estamos <span class="badge" data-demo hidden>Endereço fictício</span></h3>
+            <address id="endereco"></address>
+            <p id="mapa-link-wrap" hidden><a id="mapa-link">Ver no mapa<span class="sr-only"> (abre em nova aba)</span></a></p>
+          </article>
+
+          <article class="info-card" id="card-contato" aria-labelledby="t-fale">
+            <h3 id="t-fale">Fale com a gente</h3>
+            <div data-slot="whatsapp"></div>
+            <p id="contato-telefone" class="phone-line" hidden></p>
+            <ul class="socials" id="lista-redes" hidden></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand" data-bind="nome">Modelos de página</p>
+      <p class="footer-demo" data-demo hidden>Esta é uma página de demonstração. O negócio, o endereço, os horários, os preços e os contatos são fictícios e não representam um negócio real. As ilustrações são desenhos próprios, feitos para este projeto.</p>
+      <p class="footer-copy" id="footer-copy"></p>
+    </div>
+  </footer>
+</body>
+</html>

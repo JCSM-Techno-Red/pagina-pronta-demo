@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+<title>Ilustração: secador de cabelo</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe9e4"/><stop offset="1" stop-color="#f3d3d9"/></linearGradient></defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<g transform="rotate(-8 190 150)"><rect x="150" y="150" width="38" height="96" rx="14" fill="#e58aa3"/><ellipse cx="190" cy="120" rx="92" ry="54" fill="#9b3d5c"/><path d="M262 82 L312 72 L312 168 L262 158 Z" fill="#e58aa3"/><path d="M312 72 L322 76 L322 164 L312 168 Z" fill="#c2305a"/><circle cx="150" cy="112" r="10" fill="#fff8f3" opacity=".85"/></g><path d="M312 96 q22 -10 44 0" fill="none" stroke="#d9a35f" stroke-width="6" stroke-linecap="round"/><path d="M312 120 q22 -10 44 0" fill="none" stroke="#d9a35f" stroke-width="6" stroke-linecap="round"/><path d="M312 144 q22 -10 44 0" fill="none" stroke="#d9a35f" stroke-width="6" stroke-linecap="round"/>
+</svg>
