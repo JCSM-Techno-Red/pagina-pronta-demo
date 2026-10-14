@@ -1,0 +1,31 @@
+# Segredos e configuração local (nunca versionar)
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+secrets.*
+
+# Dependências e builds (o projeto não usa, mas evita envio acidental)
+node_modules/
+dist/
+build/
+package-lock.json.bak
+
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editores e ferramentas
+.vscode/
+.idea/
+*.swp
+
+# Logs, temporários e backups
+*.log
+*.tmp
+*.bak
+*~

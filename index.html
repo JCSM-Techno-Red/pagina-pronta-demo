@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Aurora | Salão de beleza – página de demonstração</title>
+  <meta name="description" content="Corte, coloração, tratamentos e manicure em um ambiente acolhedor. Página de demonstração do Studio Aurora, um salão fictício.">
+  <meta name="theme-color" content="#6e2540">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Studio Aurora | Salão de beleza – página de demonstração">
+  <meta property="og:description" content="Corte, coloração, tratamentos e manicure em um ambiente acolhedor. Página de demonstração do Studio Aurora, um salão fictício.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%236e2540'/%3E%3Cpath d='M6 22a10 10 0 0 1 20 0z' fill='%23f3c9a0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <aside class="demo-banner" data-demo hidden aria-label="Aviso de demonstração">
+    <p><strong>Página de demonstração.</strong> Nome, preços, horários e endereço são fictícios.</p>
+  </aside>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <svg class="brand-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="16" fill="#6e2540"/>
+          <path d="M6 22a10 10 0 0 1 20 0z" fill="#f3c9a0"/>
+          <path d="M16 6v4M7.5 10l2.8 2.8M24.5 10l-2.8 2.8" stroke="#f3c9a0" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span data-bind="nome">Studio Aurora</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li data-nav="servicos"><a href="#servicos">Serviços</a></li>
+          <li data-nav="precos"><a href="#precos">Preços</a></li>
+          <li data-nav="sobre"><a href="#sobre">Sobre</a></li>
+          <li data-nav="contato"><a href="#contato">Horários e local</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <noscript>
+      <p class="noscript-aviso">Esta página precisa de JavaScript para mostrar o conteúdo. Ative o JavaScript no navegador e recarregue.</p>
+    </noscript>
+
+    <section id="inicio" class="hero" aria-labelledby="titulo-hero">
+      <div class="container hero-inner">
+        <p class="eyebrow" data-bind="slogan"></p>
+        <h1 id="titulo-hero" data-bind="titulo">Studio Aurora</h1>
+        <p class="lead" data-bind="descricao"></p>
+        <div class="cta-row">
+          <div data-slot="whatsapp"></div>
+          <a class="btn btn-secondary" href="#servicos" data-requires="servicos">Conheça os serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section" aria-labelledby="t-servicos">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-servicos">Nossos serviços</h2>
+          <p class="section-intro">Atendimentos para cabelo, unhas e eventos.</p>
+        </div>
+        <ul class="cards" id="lista-servicos"></ul>
+      </div>
+    </section>
+
+    <section id="precos" class="section section-alt" aria-labelledby="t-precos">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-precos">Preços <span class="badge" data-demo hidden>Valores demonstrativos</span></h2>
+          <p class="section-intro" id="precos-nota"></p>
+        </div>
+        <div class="table-wrap">
+          <table class="price-table">
+            <caption class="sr-only">Tabela de serviços, duração e preço</caption>
+            <thead>
+              <tr>
+                <th scope="col">Serviço</th>
+                <th scope="col">Duração</th>
+                <th scope="col" class="num">Preço</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-precos"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section" aria-labelledby="t-sobre">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2 id="t-sobre">Sobre o estúdio</h2>
+          <div id="sobre-texto"></div>
+        </div>
+        <ul class="pillars" id="destaques"></ul>
+      </div>
+    </section>
+
+    <section id="contato" class="section section-alt" aria-labelledby="t-contato">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-contato">Horários e localização</h2>
+          <p class="section-intro" data-demo hidden>As informações abaixo são fictícias e existem apenas para demonstrar a página.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card" id="card-horarios" aria-labelledby="t-horarios">
+            <h3 id="t-horarios">Horário de atendimento <span class="badge" data-demo hidden>Demonstração</span></h3>
+            <dl class="hours" id="lista-horarios"></dl>
+          </article>
+
+          <article class="info-card" id="card-local" aria-labelledby="t-local">
+            <h3 id="t-local">Onde estamos <span class="badge" data-demo hidden>Endereço fictício</span></h3>
+            <address id="endereco"></address>
+            <p id="mapa-link-wrap" hidden><a id="mapa-link">Ver no mapa<span class="sr-only"> (abre em nova aba)</span></a></p>
+          </article>
+
+          <article class="info-card" id="card-contato" aria-labelledby="t-fale">
+            <h3 id="t-fale">Fale com a gente</h3>
+            <div data-slot="whatsapp"></div>
+            <p id="contato-telefone" class="phone-line" hidden></p>
+            <p id="contato-instagram" class="insta-line" hidden></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand" data-bind="nome">Studio Aurora</p>
+      <p class="footer-demo" data-demo hidden>Esta é uma página de demonstração. O estúdio, o endereço, os horários e os preços são fictícios e não representam um negócio real.</p>
+      <p id="footer-instagram" hidden></p>
+      <p class="footer-copy" id="footer-copy"></p>
+    </div>
+  </footer>
+</body>
+</html>
