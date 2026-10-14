@@ -50,3 +50,5 @@ Antes de enviar um link ao cliente, abra-o no celular e confirme os textos.
 ## Testes
 
 Veja a lista de testes executados e pendentes no relatório final da entrega.
+
+Deploy automático configurado para a branch main do Cloudflare Workers.
